@@ -1,27 +1,28 @@
-const API_URL = "https://gold-api-proxyy.raid-mtc.workers.dev";
+// Replace with your Cloudflare Worker URL
+const API_URL = "https://gold-api-proxyy.raid-mtc.workers.dev/";
 
 async function loadGold() {
   try {
     const res = await fetch(API_URL);
     const d = await res.json();
 
-    const ounceUSD = d.price;               // GoldAPI price
-    const gramUSD = ounceUSD / 31.1035;     // oz → gram
-    const USD_TO_OMR = 0.385;               // Oman fixed rate
-
+    const ounceUSD = d.price;               // GoldAPI price per ounce
+    const gramUSD = ounceUSD / 31.1035;     // ounce → gram
+    const USD_TO_OMR = 0.385;               // Oman conversion rate
     const gramOMR = gramUSD * USD_TO_OMR;
 
+    // Calculate by karat
     document.getElementById("k24").innerText = gramOMR.toFixed(3);
     document.getElementById("k22").innerText = (gramOMR * 0.916).toFixed(3);
     document.getElementById("k21").innerText = (gramOMR * 0.875).toFixed(3);
     document.getElementById("k18").innerText = (gramOMR * 0.750).toFixed(3);
 
+    // Ounce USD and 10 Tola OMR
     document.getElementById("ounce").innerText = ounceUSD.toFixed(2);
-    document.getElementById("tola").innerText =
-      (gramOMR * 116.64).toFixed(2); // 10 tola
+    document.getElementById("tola").innerText = (gramOMR * 116.64).toFixed(2);
 
-    document.getElementById("time").innerText =
-      new Date().toLocaleTimeString();
+    // Last updated
+    document.getElementById("time").innerText = new Date().toLocaleTimeString();
 
   } catch (e) {
     console.error(e);
@@ -31,4 +32,3 @@ async function loadGold() {
 
 // Load on page open
 loadGold();
-
