@@ -1,83 +1,73 @@
 body {
-  font-family: 'Roboto', sans-serif;
-  text-align: center;
-  background: #fff8e1;
   margin: 0;
+  background: #000;
+  color: #fff;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.container {
+  text-align: center;
   padding: 20px;
 }
 
-.logo-container {
-  margin-bottom: 15px;
-}
-
 .logo {
-  max-width: 150px;
-  height: auto;
+  max-height: 120px;
+  margin-bottom: 10px;
 }
 
-.company-name {
-  font-weight: 700;
-  color: goldenrod;
-  font-size: 36px;
-  margin-bottom: 20px;
+.brand {
+  color: gold;
+  font-weight: 800;
+  font-size: 48px;
+  margin: 0;
 }
 
-.company-name .english,
-.company-name .arabic {
-  display: block;
+.arabic {
+  font-family: "Tahoma", Arial, sans-serif;
 }
 
-.refresh-btn {
-  padding: 12px 25px;
-  font-size: 18px;
-  cursor: pointer;
-  margin-bottom: 15px;
-  background-color: goldenrod;
-  color: white;
-  border: none;
-  border-radius: 8px;
-}
-
-.table-container {
-  display: inline-block;
-  text-align: center;
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin: 40px auto;
+  max-width: 900px;
 }
 
 .box {
-  border: 2px solid goldenrod;
-  margin: 10px auto;
-  padding: 15px;
-  width: 300px;
-  border-radius: 10px;
-  font-size: 22px;
-  font-weight: bold;
-  color: goldenrod;
+  border: 3px solid gold;
+  padding: 30px;
+  border-radius: 15px;
 }
 
-hr {
-  margin: 20px auto;
-  width: 300px;
-  border: 1px solid goldenrod;
+.box span {
+  display: block;
+  font-size: 36px;
+  color: gold;
+}
+
+.box strong {
+  display: block;
+  font-size: 64px;
+  margin-top: 10px;
+}
+
+.extras {
+  font-size: 28px;
+  margin: 20px 0;
 }
 
 .note {
-  margin-top: 20px;
-  font-size: 16px;
-  color: #555;
-}
-
-.contact-icons {
+  font-size: 20px;
+  color: #ccc;
   margin-top: 20px;
 }
 
-.contact-icons img {
-  width: 50px;
-  height: 50px;
-  margin: 0 10px;
-  cursor: pointer;
-  transition: transform 0.2s;
+.social {
+  margin-top: 25px;
 }
 
-.contact-icons img:hover {
-  transform: scale(1.2);
+.social img {
+  width: 60px;
+  margin: 0 20px;
 }
