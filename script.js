@@ -1,5 +1,5 @@
 const API_URL = "https://gold-api-proxyy.raid-mtc.workers.dev/";
-const MARKET_PREMIUM = 0.5; // Oman market adjustment
+const MARKET_PREMIUM = 0.6; // Oman market adjustment
 
 async function loadGold() {
   try {
