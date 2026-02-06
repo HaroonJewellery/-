@@ -1,7 +1,4 @@
-// Replace with your Cloudflare Worker URL
 const API_URL = "https://gold-api-proxyy.raid-mtc.workers.dev/";
-
-// Oman jewellery market adjustment (OMR per gram)
 const MARKET_PREMIUM = 0.5;
 
 async function loadGold() {
@@ -13,13 +10,12 @@ async function loadGold() {
     const gramUSD = ounceUSD / 31.1035;
     const USD_TO_OMR = 0.385;
 
-    // Convert to OMR and APPLY market premium here (only once)
     const gramOMR = (gramUSD * USD_TO_OMR) + MARKET_PREMIUM;
 
     document.getElementById("k24").innerText = gramOMR.toFixed(3);
     document.getElementById("k22").innerText = (gramOMR * 0.916).toFixed(3);
     document.getElementById("k21").innerText = (gramOMR * 0.875).toFixed(3);
-    document.getElementById("k18").innerText = (gramOMR * 0.750).toFixed(3);
+    document.getElementById("k18").innerText = (gramOMR * 0.75).toFixed(3);
 
     document.getElementById("ounce").innerText = ounceUSD.toFixed(2);
     document.getElementById("tola").innerText = (gramOMR * 116.64).toFixed(2);
@@ -32,5 +28,6 @@ async function loadGold() {
   }
 }
 
-// Load on page open
+// Load on page open and refresh every 60 seconds
 loadGold();
+setInterval(loadGold, 60000);
