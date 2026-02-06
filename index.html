@@ -2,27 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Gold Rates</title>
+  <title>Live Gold Rates</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- REFRESH BUTTON + DATA BOXES GO HERE -->
+  <h1>💰 Live Gold Rates</h1>
   <button onclick="loadGold()">🔄 Refresh</button>
-  <p>Last updated: <span id="time"></span></p>
+  <p>Last updated: <span id="time">--</span></p>
 
-  <div class="box">24K: <span id="k24"></span> OMR</div>
-  <div class="box">22K: <span id="k22"></span> OMR</div>
-  <div class="box">21K: <span id="k21"></span> OMR</div>
-  <div class="box">18K: <span id="k18"></span> OMR</div>
+  <div class="box">24K: <span id="k24">--</span> OMR</div>
+  <div class="box">22K: <span id="k22">--</span> OMR</div>
+  <div class="box">21K: <span id="k21">--</span> OMR</div>
+  <div class="box">18K: <span id="k18">--</span> OMR</div>
 
   <hr>
 
-  <div class="box">Gold / Ounce: $<span id="ounce"></span></div>
-  <div class="box">10 Tola: <span id="tola"></span> OMR</div>
+  <div class="box">Gold / Ounce: $<span id="ounce">--</span></div>
+  <div class="box">10 Tola: <span id="tola">--</span> OMR</div>
 
-  <!-- LINK TO SCRIPT -->
   <script src="script.js"></script>
-
 </body>
 </html>
