@@ -2,24 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Live Gold Rates</title>
+  <title>Haroon Jewellery - Live Gold Rates</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts for professional look -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>💰 Live Gold Rates</h1>
-  <button onclick="loadGold()">🔄 Refresh</button>
+
+  <!-- Company Logo -->
+  <div class="logo-container">
+    <img src="logo.png" alt="Haroon Jewellery Logo" class="logo">
+  </div>
+
+  <!-- Company Name -->
+  <div class="company-name">
+    <span class="english">Haroon Jewellery</span>
+    <span class="arabic">مجوهرات هارون</span>
+  </div>
+
+  <!-- Refresh Button -->
+  <button onclick="loadGold()" class="refresh-btn">🔄 Refresh</button>
   <p>Last updated: <span id="time">--</span></p>
 
-  <div class="box">24K: <span id="k24">--</span> OMR</div>
-  <div class="box">22K: <span id="k22">--</span> OMR</div>
-  <div class="box">21K: <span id="k21">--</span> OMR</div>
-  <div class="box">18K: <span id="k18">--</span> OMR</div>
+  <!-- Gold Rates Table -->
+  <div class="table-container">
+    <div class="box">24K: <span id="k24">--</span> OMR</div>
+    <div class="box">22K: <span id="k22">--</span> OMR</div>
+    <div class="box">21K: <span id="k21">--</span> OMR</div>
+    <div class="box">18K: <span id="k18">--</span> OMR</div>
 
-  <hr>
+    <hr>
 
-  <div class="box">Gold / Ounce: $<span id="ounce">--</span></div>
-  <div class="box">10 Tola: <span id="tola">--</span> OMR</div>
+    <div class="box">Gold / Ounce: $<span id="ounce">--</span></div>
+    <div class="box">10 Tola: <span id="tola">--</span> OMR</div>
+  </div>
 
+  <!-- Arabic Note -->
+  <p class="note">ملاحظة: أسعار الذهب قابلة للتغيير باستمرار – آخر تحديث</p>
+
+  <!-- Contact Links -->
+  <div class="contact-icons">
+    <a href="https://instagram.com/YOUR_INSTA" target="_blank">
+      <img src="insta.png" alt="Instagram">
+    </a>
+    <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank">
+      <img src="whatsapp.png" alt="WhatsApp">
+    </a>
+  </div>
+
+  <!-- JS -->
   <script src="script.js"></script>
 </body>
 </html>
+
